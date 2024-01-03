@@ -7,10 +7,6 @@ const StringBuilder = function StringBuilder(v) {
     this.append(v);
     Stream.call(this);
 
-    if (this.newline === undefined) {
-        const isWindows = process.platform === 'win32';
-        this.newline = isWindows ? '\r\n' : '\n';
-    }
 };
 
 StringBuilder.prototype.append = function (v) {
